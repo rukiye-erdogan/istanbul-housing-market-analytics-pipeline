@@ -1,0 +1,27 @@
+# Core Data Science & Engineering
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+jupyter>=1.0.0
+
+# Data Processing & ETL
+pyarrow>=12.0.0
+openpyxl>=3.1.0
+
+# Visualization & Dashboarding
+plotly>=5.15.0
+dash>=2.0.0
+
+# Big Data & Spark (for future extension)
+# pyspark>=3.4.0
+
+# Utilities
+requests>=2.31.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+scikit-learn>=1.3.0
+
+# Development & Formatting
+black>=23.0.0
+flake8>=6.0.0
