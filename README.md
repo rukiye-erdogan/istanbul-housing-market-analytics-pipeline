@@ -13,7 +13,7 @@ Dieses Projekt analysiert den Immobilienmarkt in Istanbul (über 24.000 Wohnungs
 
 Ziel ist es, aussagekräftige Business Insights zu gewinnen und ein professionelles Dashboard zu erstellen.
 
-## 🗂 Projektstruktur
+## Projektstruktur
 
 ```bash
 istanbul-housing-market-analytics-pipeline/
