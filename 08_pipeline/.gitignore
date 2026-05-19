@@ -1,0 +1,11 @@
+.DS_Store
+
+# Data files
+01_data/*.csv
+01_data/*.db
+
+# Jupyter
+02_notebooks/.ipynb_checkpoints/
+
+# Optional: ignore notebooks entirely
+# 02_notebooks/*.ipynb
