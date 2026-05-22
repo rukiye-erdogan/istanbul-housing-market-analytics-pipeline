@@ -31,8 +31,10 @@ https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResid
 
 ## Pipeline Architecture
 
-<p align="center" style="padding: 30px; background-color: #f0f7f0; border-radius: 12px;">
-  <img src="assets/pipeline-architecture.png.drawio.png" width="380">
+<p align="center">
+  <br>
+  <img src="assets/pipeline-architecture.png.drawio.png" width="500">
+  <br><br>
 </p>
                                                                               
 ## Project Overview
