@@ -256,13 +256,47 @@ Istanbul Residence Listings Analysis successfully establishes the foundation for
 
 ## Project Structure
 
+## 📂 Project Structure
+
 ```bash
 istanbul-housing-market-analytics-pipeline/
-├── data/              # Raw and processed datasets
-├── 02_notebooks/         # Jupyter Notebooks (Exploration & Analysis)
-├── scripts/           # Python Scripts (ETL, Processing)
-├── dashboards/        # Tableau Workbooks
-├── assets/            # Screenshots & Visuals
-├── presentation/      # Abschlusspräsentation
-├── requirements.txt      # Python Dependencies
-└── README.md
+├── assets/
+│   ├── architecture/              # Pipeline architecture diagrams
+│   ├── bot/                       # Telegram bot assets & visuals
+│   ├── branding/                  # Branding elements & custom graphics
+│   ├── dashboards/                # Tableau dashboard screenshots
+│   └── screenshots/               # Additional project visuals
+│
+├── dashboards/                    # Tableau dashboard workbooks
+│
+├── data/
+│   ├── raw/                       # Raw scraped datasets
+│   ├── processed/                 # Cleaned & transformed datasets
+│   ├── historical/                # Historical residence price tracking
+│   ├── snapshots/                 # Daily pipeline snapshots
+│   ├── istanbul_housing.db        # SQLite database
+│   └── *.csv                      # Pipeline output datasets
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   └── 02_big_data_architecture.ipynb
+│
+├── scripts/
+│   ├── alerts/                    # Telegram notification logic
+│   ├── automation/                # Automated scheduling scripts
+│   ├── processing/
+│   │   └── exchange_rates.py      # Currency conversion logic
+│   ├── scraping/
+│   │   └── scrape_hepsiemlak.py   # Istanbul residence web scraping
+│   └── run_pipeline.py            # Main ETL pipeline execution
+│
+├── tests/
+│   └── test_connection.py
+│
+├── presentation/                  # Final project presentation
+├── run_full_pipeline.sh           # Full automation runner
+├── requirements.txt               # Python dependencies
+├── README.md
+└── LICENSE
+```
+
