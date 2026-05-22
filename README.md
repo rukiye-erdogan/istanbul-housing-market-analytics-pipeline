@@ -13,7 +13,7 @@ Interactive Tableau dashboards for exploring Istanbul housing market trends and 
 
 ## Dashboard Previews
 
-### Istanbul Housing Market Analytics 2026
+### Market Analytics Dashboard – Istanbul Housing Market Analytics 2026
 
 ![Istanbul Housing Market Analytics 2026](assets/dashboards/istanbul-housing-market-analytics-2026.png)
 
@@ -22,7 +22,7 @@ https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHous
 
 ---
 
-### Istanbul Residence Listings Analysis
+### ### Residence Listings Dashboard – Istanbul Residence Listings Analysis
 
 ![Istanbul Residence Listings Analysis](assets/dashboards/istanbul-residence-listings-analysis.png)
 
