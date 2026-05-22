@@ -253,9 +253,6 @@ Potential future enhancements include:
 Istanbul Residence Listings Analysis successfully establishes the foundation for a scalable and automated real estate analytics pipeline. While full automation could not be completed within Tableau Public Web Authoring, the project demonstrates the architecture, analytical logic, and workflow design required for a production-ready business intelligence solution.
 ```
 
-
-## Project Structure
-
 ## 📂 Project Structure
 
 ```bash
