@@ -9,8 +9,25 @@ From Raw Data to Business Insights using Modern Data Engineering Tools
 
 ## Live Dashboard
 
-🔗 Tableau Public Dashboard:
+Interactive Tableau dashboards for exploring Istanbul housing market trends and analytics.
+
+## Dashboard Previews
+
+### Istanbul Housing Market Analytics 2026
+
+![Istanbul Housing Market Analytics 2026](assets/dashboards/istanbul-housing-market-analytics-2026.png)
+
+🔗 Tableau Dashboard:
 https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026
+
+---
+
+### Istanbul Residence Listings Analysis
+
+![Istanbul Residence Listings Analysis](assets/dashboards/istanbul-residence-listings-analysis.png)
+
+🔗 Tableau Dashboard:
+https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResidenceListingsAnalysis
 
 ## Project Overview
 
