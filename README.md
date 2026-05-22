@@ -300,3 +300,87 @@ istanbul-housing-market-analytics-pipeline/
 └── LICENSE
 ```
 
+## 🤖 Automated Telegram Alert System
+
+The project includes an automated Telegram bot that continuously monitors residence listings across Istanbul.
+
+Every two days, the pipeline automatically executes the complete ETL workflow:
+
+1. Scrapes new residence listings from Istanbul-based real estate platforms  
+2. Cleans and processes the incoming housing data  
+3. Tracks newly added properties and market changes  
+4. Converts all property prices into:
+   - Turkish Lira (₺)
+   - Euro (€)
+   - US Dollar ($)
+5. Sends automated Telegram notifications with the latest market updates
+
+This automation creates a lightweight real-estate monitoring system for tracking Istanbul's residence market in near real-time.
+
+### Key Features
+
+- Automated scraping every 48 hours
+- Istanbul-focused residence monitoring
+- Multi-currency price conversion
+- Automated Telegram alerts
+- Historical snapshot tracking
+- Scalable ETL architecture
+- Fully automated pipeline execution
+
+---
+
+## 📲 Telegram Bot Integration
+
+The project includes a fully automated Telegram notification system called:
+
+### Istanbul Housing Alerts Bot
+
+The bot was designed as a lightweight real-estate monitoring assistant focused exclusively on residence listings in Istanbul.
+
+Users automatically receive curated housing alerts, market updates, and filtered residence opportunities directly through Telegram.
+
+---
+
+### 🔄 Automated Workflow
+
+Every 48 hours, the system automatically:
+
+- Scrapes new Istanbul residence listings
+- Detects newly added offers
+- Filters relevant housing opportunities
+- Processes and cleans the data
+- Converts listing prices into:
+  - Turkish Lira (₺)
+  - Euro (€)
+  - US Dollar ($)
+- Sends personalized Telegram notifications
+
+---
+
+### 🧠 Smart Notification Logic
+
+The bot distinguishes between:
+
+- New residence opportunities
+- No-change market updates
+- Historical market tracking
+- Automated monitoring cycles
+
+This creates a clean user experience without unnecessary spam notifications.
+
+---
+
+### 🎨 Bot Branding & UX Design
+
+The Telegram bot includes a custom-designed visual identity featuring:
+
+- Personalized mascot branding
+- Emotion-based Telegram reactions
+- Friendly conversational tone
+- Real-estate focused storytelling
+- Istanbul-themed visuals
+- Automated market assistant behavior
+
+The goal was to combine data engineering with a user-friendly product experience.
+
+---
