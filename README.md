@@ -54,7 +54,7 @@ The project aims to identify:
 ## Key Business Insights
 
 ```markdown
-# Istanbul Real Estate Market Dashboard
+# Istanbul Housing Market Analytics 2026
 
 ## Overview
 This dashboard provides a comprehensive analysis of Istanbul’s residential real estate market using interactive visualizations and district-based comparisons. The project focuses on identifying pricing trends, regional differences, housing characteristics, and investment insights across both the Asian and European sides of Istanbul.
