@@ -30,21 +30,9 @@ https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHous
 https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResidenceListingsAnalysis
 
 ## Pipeline Architecture
-```text
-Raw Housing Data
-        ↓
-Data Cleaning & Preprocessing
-        ↓
-Exploratory Data Analysis (EDA)
-        ↓
-Feature Engineering
-        ↓
-SQLite / Processed Dataset
-        ↓
-Tableau Dashboard Visualization
-        ↓
-Business Insights & Market Analysis
-``` 
+
+![Pipeline Architecture](assets/pipeline-architecture.png.drawio.png)
+                                                                              
 ## Project Overview
 
 This project analyzes the Istanbul housing market using an end-to-end data analytics pipeline built with Python, SQL, and Tableau.
