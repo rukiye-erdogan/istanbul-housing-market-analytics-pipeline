@@ -168,6 +168,89 @@ New Build (0–5 years):
 
 # Conclusion
 The dashboard reveals substantial pricing disparities across Istanbul’s districts and highlights how factors such as location, property size, furnishing status, and building age significantly influence real estate prices. The analysis also demonstrates the dominance of luxury residential developments in premium districts and provides valuable insights for investors, analysts, and decision-makers.
+
+
+# Istanbul Residence Listings Analysis
+
+## Project Overview
+Istanbul Residence Listings Analysis was developed as part of a mini data engineering and business intelligence pipeline project. The primary objective was to design a workflow capable of automatically collecting, processing, and visualizing real estate listing data from Istanbul.
+
+The project was intended to simulate a real-world BI environment in which newly collected property data would continuously update the dashboard through an automated pipeline.
+
+---
+
+# Project Objective
+The main goals of the project were:
+
+- Automated collection of residence listing data
+- Data cleaning and preprocessing
+- Structured data storage
+- Tableau dashboard integration
+- Automated dashboard data refresh workflow
+
+---
+
+# Current Project Status
+Istanbul Residence Listings Analysis currently includes the complete dashboard structure and analytical framework. Core visualizations and KPI logic have already been implemented, including:
+
+- Residence listings by district
+- Average property price analysis
+- Time-based listing monitoring
+- Interactive district filtering
+
+The automation workflow, however, could not be fully finalized due to limitations of Tableau Public Web Authoring, which does not support advanced scheduling and automatic data refresh functionality.
+
+---
+
+# Technical Limitation
+Since the project was built using Tableau Public Web Authoring, direct pipeline automation and scheduled refresh capabilities were limited.
+
+In a production-ready environment using:
+- Tableau Desktop
+- Tableau Cloud
+- Tableau Server
+- External ETL orchestration tools (Python, APIs, Cron Jobs, Airflow, etc.)
+
+the dashboard could be integrated into a fully automated end-to-end data pipeline.
+
+---
+
+# Planned Pipeline Architecture
+The intended architecture included:
+
+1. Automated scraping of residence listing data
+2. Scheduled preprocessing and data cleaning
+3. Automated dataset updates
+4. Dynamic Tableau dashboard refresh
+5. Continuous market trend monitoring
+
+---
+
+# Skills & Concepts Demonstrated
+- Data Visualization
+- Business Intelligence
+- Tableau Dashboard Development
+- ETL / ELT Pipeline Planning
+- Real Estate Market Analysis
+- Interactive Reporting
+- Dashboard Architecture Design
+
+---
+
+# Future Improvements
+Potential future enhancements include:
+
+- Migration to Tableau Desktop or Tableau Cloud
+- Automated Python ETL pipelines
+- Scheduled refresh implementation
+- Database integration
+- Live API connections
+- Expanded historical trend analysis
+
+---
+
+# Conclusion
+Istanbul Residence Listings Analysis successfully establishes the foundation for a scalable and automated real estate analytics pipeline. While full automation could not be completed within Tableau Public Web Authoring, the project demonstrates the architecture, analytical logic, and workflow design required for a production-ready business intelligence solution.
 ```
 
 
