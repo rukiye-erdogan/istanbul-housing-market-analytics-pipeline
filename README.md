@@ -12,11 +12,17 @@ From Raw Data to Business Insights using Modern Data Engineering Tools
 🔗 Tableau Public Dashboard:
 https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026
 
-## Projektbeschreibung
+## Project Overview
 
-Dieses Projekt analysiert den Immobilienmarkt in Istanbul (über 24.000 Wohnungsangebote) mit modernen Data Engineering und Analytics Methoden.
+This project analyzes the Istanbul housing market using an end-to-end data analytics pipeline built with Python, SQL, and Tableau.
 
-Ziel ist es, aussagekräftige Business Insights zu gewinnen und ein professionelles Dashboard zu erstellen.
+The pipeline processes more than 24,000 housing listings and transforms raw real estate data into actionable business insights through data cleaning, exploratory analysis, and interactive dashboard visualization.
+
+The project aims to identify:
+- Pricing trends across Istanbul districts
+- High-value investment opportunities
+- Property distribution patterns
+- Market segmentation insights
 
 ## Projektstruktur
 
