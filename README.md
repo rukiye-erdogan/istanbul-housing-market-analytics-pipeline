@@ -384,3 +384,56 @@ The Telegram bot includes a custom-designed visual identity featuring:
 The goal was to combine data engineering with a user-friendly product experience.
 
 ---
+
+## 📸 Telegram Bot Preview
+
+### 🐻 Istanbul Housing Alerts Bot
+
+Custom-designed Telegram assistant for automated Istanbul residence monitoring.
+
+<p align="center">
+  <img src="assets/bot/bot_profile.png" width="240"/>
+</p>
+
+---
+
+### 🎨 Bot Branding & Workflow
+
+<p align="center">
+  <img src="assets/bot/telegram_bot_branding.png" width="950"/>
+</p>
+
+---
+
+### 📩 New Residence Alert
+
+The bot automatically sends notifications whenever new Istanbul residence listings are detected during the scheduled scraping cycle.
+
+<p align="center">
+  <img src="assets/bot/telegram_new_listing.png" width="520"/>
+</p>
+
+---
+
+### 📊 No-New-Listing Notification
+
+If no new residence opportunities are found, the bot sends a friendly market monitoring update instead of unnecessary spam notifications.
+
+<p align="center">
+  <img src="assets/bot/telegram_no_new_listing.png" width="520"/>
+</p>
+
+---
+
+### 🐻 Custom Emoji System
+
+The Telegram assistant includes custom-designed mascot reactions to create a more engaging and user-friendly experience.
+
+<p align="center">
+  <img src="assets/screenshots/daumenhoch_1_EMOJI.png" width="80"/>
+  <img src="assets/screenshots/peace_4_EMOJI.png" width="80"/>
+  <img src="assets/screenshots/schlaubi_2_EMOJI.png" width="80"/>
+  <img src="assets/screenshots/woaw_3_EMOJI.png" width="80"/>
+</p>
+
+---
