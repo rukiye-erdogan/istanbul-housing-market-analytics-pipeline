@@ -386,7 +386,6 @@ The goal was to combine data engineering with a user-friendly product experience
 ---
 
 ## 📸 Telegram Bot Preview
-## 🤖 Telegram Bot Preview
 
 ### 🧸 Bot Profile
 
