@@ -386,33 +386,86 @@ The goal was to combine data engineering with a user-friendly product experience
 ---
 
 ## 📸 Telegram Bot Preview
+## 🤖 Telegram Bot Preview
 
-### 🐻 Istanbul Housing Alerts Bot
-
-Custom-designed Telegram assistant for automated Istanbul residence monitoring.
+### 🧸 Bot Profile
 
 <p align="center">
-  <img src="assets/bot/bot_profile.png" width="240"/>
+  <img src="assets/bot/bot_profile.png" width="220">
 </p>
+
+The Telegram assistant acts as the intelligent communication layer of the Istanbul Housing Analytics Pipeline.
+
+It automatically informs users whenever newly discovered residence listings appear during the scheduled scraping cycle.
+
+The bot combines:
+
+- automated residence scraping
+- PySpark-based data processing
+- historical listing comparison
+- smart filtering logic
+- Telegram Bot integration
+- recurring execution every 48 hours
 
 ---
 
 ### 🎨 Bot Branding & Workflow
 
 <p align="center">
-  <img src="assets/bot/telegram_bot_branding.png" width="950"/>
+  <img src="assets/bot/telegram_bot_branding.jpg" width="900">
 </p>
+
+The project includes a fully designed Telegram branding concept to create a more modern and engaging user experience.
+
+The branding combines:
+
+- friendly visual storytelling
+- custom mascot design
+- clean Telegram message formatting
+- motivational notification design
+- automated workflow presentation
+
+The goal is to transform technical market monitoring into a user-friendly real estate assistant experience.
 
 ---
 
-### 📩 New Residence Alert
+### 📱 Telegram-Status
+
+<p align="center">
+  <img src="assets/bot/telegram_status.jpg" width="500">
+</p>
+
+The Telegram status overview demonstrates the live bot environment and overall notification ecosystem.
+
+It provides a compact preview of:
+
+- bot profile setup
+- Telegram integration
+- listing previews
+- notification structure
+- user interaction interface
+
+This section highlights how the project connects data engineering workflows with real-world user communication.
+
+---
+
+### 📬 New Residence Alert
 
 The bot automatically sends notifications whenever new Istanbul residence listings are detected during the scheduled scraping cycle.
 
 The scraping process runs automatically every 48 hours and focuses exclusively on residence listings located in Istanbul.
 
+The notification includes:
+
+- district information
+- neighborhood
+- residence complex details
+- property price
+- scraping timestamp
+- direct listing link
+
 <p align="center">
-  <img src="assets/bot/telegram_new_listing.png" width="520"/>
+  <img src="assets/bot/new_list.jpg" width="350">
 </p>
 
 ---
@@ -421,9 +474,36 @@ The scraping process runs automatically every 48 hours and focuses exclusively o
 
 If no new residence opportunities are found, the bot sends a friendly market monitoring update instead of unnecessary spam notifications.
 
+This creates a cleaner and more professional user experience while keeping users informed about market activity.
+
 <p align="center">
-  <img src="assets/bot/telegram_no_new_listing.png" width="520"/>
+  <img src="assets/bot/no_list.jpg" width="350">
 </p>
+
+---
+
+### ⚙️ Automated Notification Pipeline
+
+The complete Telegram workflow operates automatically:
+
+1. Residence data gets scraped from the target platform  
+2. Data is processed using PySpark  
+3. Historical listings are compared  
+4. Only newly discovered properties are selected  
+5. Telegram notifications are generated dynamically  
+6. Alerts are sent to subscribers automatically
+
+---
+
+### 🛠️ Technologies Used
+
+- Python
+- Telegram Bot API
+- PySpark
+- Pandas
+- BeautifulSoup
+- Scheduling Automation
+- GitHub Actions Ready
 
 ---
 
