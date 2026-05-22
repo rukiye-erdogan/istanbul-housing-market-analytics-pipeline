@@ -33,8 +33,10 @@ https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResid
 
 <p align="center">
   <br>
+  
   <img src="assets/pipeline-architecture.png.drawio.png" width="400">
   <br><br>
+  
 </p>
                                                                               
 ## Project Overview
