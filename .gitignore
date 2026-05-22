@@ -1,11 +1,18 @@
 .DS_Store
 
 # Data files
-01_data/*.csv
-01_data/*.db
+data/*.csv
+data/*.db
 
 # Jupyter
-02_notebooks/.ipynb_checkpoints/
-02_notebooks/*.ipynb
+notebooks/.ipynb_checkpoints/
+# notebooks/*.ipynb
 # Optional: ignore notebooks entirely
-# 02_notebooks/*.ipynb
+# notebooks/*.ipynb
+__pycache__/
+*.pyc
+.env
+venv/
+logs/
+*.log.env
+*.db

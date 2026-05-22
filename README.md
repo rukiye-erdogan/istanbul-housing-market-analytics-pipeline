@@ -22,11 +22,11 @@ Ziel ist es, aussagekräftige Business Insights zu gewinnen und ein professionel
 
 ```bash
 istanbul-housing-market-analytics-pipeline/
-├── 01_data/              # Raw and processed datasets
+├── data/              # Raw and processed datasets
 ├── 02_notebooks/         # Jupyter Notebooks (Exploration & Analysis)
-├── 03_scripts/           # Python Scripts (ETL, Processing)
-├── 04_dashboards/        # Tableau Workbooks
-├── 05_images/            # Screenshots & Visuals
-├── 06_presentation/      # Abschlusspräsentation
+├── scripts/           # Python Scripts (ETL, Processing)
+├── dashboards/        # Tableau Workbooks
+├── assets/            # Screenshots & Visuals
+├── presentation/      # Abschlusspräsentation
 ├── requirements.txt      # Python Dependencies
 └── README.md
