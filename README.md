@@ -275,7 +275,7 @@ istanbul-housing-market-analytics-pipeline/
 │   ├── historical/                # Historical residence price tracking
 │   ├── snapshots/                 # Daily pipeline snapshots
 │   ├── istanbul_housing.db        # SQLite database
-│   └── *.csv                      # Pipeline output datasets
+│   └── CSV exports                # Pipeline output datasets                   
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
