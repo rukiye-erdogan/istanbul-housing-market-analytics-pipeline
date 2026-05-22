@@ -262,8 +262,7 @@ Istanbul Residence Listings Analysis successfully establishes the foundation for
 istanbul-housing-market-analytics-pipeline/
 ├── assets/
 │   ├── architecture/              # Pipeline architecture diagrams
-│   ├── bot/                       # Telegram bot assets & visuals
-│   ├── branding/                  # Branding elements & custom graphics
+│   ├── bot/                       # Telegram bot assets & notifications
 │   ├── dashboards/                # Tableau dashboard screenshots
 │   └── screenshots/               # Additional project visuals
 │
@@ -274,8 +273,8 @@ istanbul-housing-market-analytics-pipeline/
 │   ├── processed/                 # Cleaned & transformed datasets
 │   ├── historical/                # Historical residence price tracking
 │   ├── snapshots/                 # Daily pipeline snapshots
-│   ├── istanbul_housing.db        # SQLite database
-│   └── CSV exports                # Pipeline output datasets                   
+│   ├── exports/                   # CSV pipeline exports
+│   └── istanbul_housing.db        # SQLite database
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
@@ -295,7 +294,7 @@ istanbul-housing-market-analytics-pipeline/
 │
 ├── presentation/                  # Final project presentation
 ├── run_full_pipeline.sh           # Full automation runner
-├── requirements.txt               # Python dependencies
+├── requirements.txt
 ├── README.md
 └── LICENSE
 ```
