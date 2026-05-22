@@ -22,7 +22,7 @@ https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHous
 
 ---
 
-### ### Residence Listings Dashboard – Istanbul Residence Listings Analysis
+### Residence Listings Dashboard – Istanbul Residence Listings Analysis
 
 ![Istanbul Residence Listings Analysis](assets/dashboards/istanbul-residence-listings-analysis.png)
 
