@@ -409,6 +409,8 @@ Custom-designed Telegram assistant for automated Istanbul residence monitoring.
 
 The bot automatically sends notifications whenever new Istanbul residence listings are detected during the scheduled scraping cycle.
 
+The scraping process runs automatically every 48 hours and focuses exclusively on residence listings located in Istanbul.
+
 <p align="center">
   <img src="assets/bot/telegram_new_listing.png" width="520"/>
 </p>
@@ -422,6 +424,25 @@ If no new residence opportunities are found, the bot sends a friendly market mon
 <p align="center">
   <img src="assets/bot/telegram_no_new_listing.png" width="520"/>
 </p>
+
+---
+
+### 💱 Multi-Currency Price Conversion
+
+To improve international usability, the pipeline automatically converts Turkish Lira (TRY) property prices into Euro (EUR) and US Dollar (USD).
+
+The currency conversion logic is implemented in:
+
+```bash
+scripts/processing/exchange_rates.py
+```
+
+This allows Telegram notifications and processed datasets to provide:
+- 🇹🇷 Turkish Lira (TRY)
+- 🇪🇺 Euro (EUR)
+- 🇺🇸 US Dollar (USD)
+
+for each detected Istanbul residence listing.
 
 ---
 
