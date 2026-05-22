@@ -51,6 +51,14 @@ The project aims to identify:
 - Property distribution patterns
 - Market segmentation insights
 
+## Key Business Insights
+
+- Bakırköy and Şişli exhibit significantly higher average housing prices compared to outer districts such as Esenyurt.
+- European-side districts generally demonstrate stronger pricing trends than Anatolian-side districts.
+- Medium-sized apartments appear to represent a major share of Istanbul housing listings.
+- Furnished properties tend to achieve higher average prices than unfurnished units.
+- Housing prices vary considerably across districts, highlighting strong regional market segmentation within Istanbul.
+
 ## Project Structure
 
 ```bash
