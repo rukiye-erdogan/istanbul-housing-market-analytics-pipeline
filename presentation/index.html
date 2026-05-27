@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Istanbul Housing Market Analytics Pipeline</title>
+<link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css">
+
+
+<style>
+@page {
+    size: landscape;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.reveal {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 14px;
+
+    line-height: 1.1;
+}
+.reveal section img {
+
+    margin-top: 10px;
+
+    border-radius: 12px;
+}
+.reveal .slides section {
+
+    padding: 20px !important;
+}
+.box {
+    background: rgba(255,255,255,0.93);
+    padding: 16px 30px;        /* weniger Padding oben/unten */
+    border-radius: 16px;
+    max-width: 980px;
+    text-align: left;
+    margin: 0;                 /* wichtiger Reset */
+}
+
+.box ul {
+    margin-top: 6px;           /* sehr wenig Abstand nach Überschrift */
+    margin-bottom: 6px;
+    padding-left: 28px;
+}
+
+.small { font-size: 23px; line-height: 1.4; }
+
+/* Pipeline Bild optimiert */
+
+.reveal section img.pipeline {
+
+    border-radius: 16px;
+
+    width: auto;
+    height: auto;
+
+    max-width: 78% !important;
+
+    max-height: 480px !important;
+
+    display: block;
+
+    margin: 10px auto 0 auto;
+
+    object-fit: contain;
+
+    padding-bottom: 18px;
+}
+
+/* FIX FÜR PIPELINE ARCHITEKTUR */
+
+.pipeline-slide {
+
+    overflow: visible !important;
+
+    justify-content: flex-start !important;
+}
+
+.pipeline-slide img.pipeline {
+
+    transform-origin: top center;
+}
+/* Kompaktere Abstände für Slide 2 */
+
+.overview-slide {
+
+    justify-content: flex-start !important;
+
+    padding-top: 10px !important;
+}
+
+.overview-slide h2 {
+
+    margin-top: 12px !important;
+
+    margin-bottom: 4px !important;
+}
+
+.overview-slide .box {
+
+    padding-top: 2px !important;
+
+    padding-bottom: 6px !important;
+
+    margin-top: 0px !important;
+
+    margin-bottom: 8px !important;
+}
+
+.overview-slide ul {
+
+    margin-top: -4px !important;
+
+    margin-bottom: 0px !important;
+}
+
+.overview-slide p {
+
+    margin-top: 0px !important;
+
+    margin-bottom: 6px !important;
+
+    line-height: 1.25;
+}
+/* Projektstruktur - kompakt */
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9.0px;
+    line-height: 1.03;
+    text-align: left;
+    background: rgba(255,255,255,0.95);
+    padding: 20px 26px;           /* mehr Platz rechts */
+    border-radius: 12px;
+    overflow-x: auto;
+    max-width: 1500px;            /* breiter machen */
+    white-space: pre;
+    word-break: normal;
+}
+
+@media print {
+    html, body {
+        width: 100% !important;
+        height: 100% !important;
+        overflow: visible !important;
+        background-color: white !important;
+    }
+
+    /* Verhindert, dass der Reveal-Container das Layout abschneidet */
+    .reveal {
+        width: 100% !important;
+        height: 100% !important;
+        overflow: visible !important;
+    }
+
+    /* Erzwingt die absolute Zentrierung jeder einzelnen gedruckten Slide */
+    .reveal .slides {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        zoom: normal !important;
+        transform: none !important;
+    }
+
+    .reveal .slides section {
+        page-break-after: always !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;  /* Vertikale Zentrierung */
+        align-items: center !important;      /* Horizontale Zentrierung */
+        min-height: 99vh !important;         /* Nutzt fast die exakte Blatthöhe */
+        box-sizing: border-box !important;
+    }
+
+    /* Hält Boxen und Code-Blöcke innerhalb der zentrierten Slides linksbündig */
+    .reveal .slides section pre,
+    .reveal .slides section .box {
+        text-align: left !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Bildgrößen-Kontrolle beim Druck */
+    .reveal img {
+        max-width: 80% !important;
+        max-height: 50vh !important;
+        object-fit: contain !important;
+    }
+
+    pre {
+        overflow: hidden !important;
+        max-height: none !important;
+    }
+}
+/* Spezielle Korrektur für Slide 3 */
+section h2 + .box {
+    margin-top: 10px !important;
+}
+
+.box.small ul {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+/* === STARKER OVERRIDE FÜR SLIDE 3 === */
+.box.small {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+}
+/* === STARKER OVERRIDE FÜR SLIDE 3 === */
+.box.small {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+}
+
+.box.small ul {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    padding-left: 26px !important;
+}
+/* ==========================================
+   BOT-SLIDES OPTIMIERUNG (SLIDES 9, 10, 11)
+   ========================================== */
+
+/* 1. Flexbox-Zentrierung für die Sektionen selbst */
+.reveal section.bot-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+}
+
+/* 2. Bildbegrenzung UND automatische Zentrierung für die Bilder */
+.reveal section.bot-slide img {
+    max-width: 100% !important;
+    max-height: 60vh !important; /* Verhindert das Abschneiden */
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    
+    /* Diese Zeilen zwingen das Bild in die Mitte der Sektion */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+    <img src="/assets/Branding/welcome.jpeg" width="170">
+    <h2>IHK Rhein-Neckar</h2>
+    <h3>Big Data Engineer 2-2026</h3>
+    <h2>"Istanbul Housing Market Analytics Pipeline"</h2>
+    <p>Präsentation der Projektarbeit</p>
+    <p><strong>von Rukiye Erdogan</strong></p>
+    <p>23.05.2026</p>
+    <br>
+    <p class="small">GitHub: <a href="https://github.com/rukiye-erdogan">github.com/rukiye-erdogan</a></p>
+    <p class="small">Tableau: <a href="https://public.tableau.com/app/profile/rukiye.erdogan/vizzes">Tableau Public Profile</a></p>
+</section>
+
+<!-- SLIDE 2: PROJEKTIDEE + KAGGLE + TABLEAU -->
+<section class="overview-slide">
+    <h2>PROJEKTIDEE</h2>
+    <div class="box small">
+        <ul>
+            <li>Analyse des Immobilienmarktes in Istanbul</li>
+            <li>Automatische Überwachung neuer Residence-Angebote</li>
+            <li>ETL Pipeline mit historischen Datensätzen</li>
+            <li>Dashboard Visualisierung mit Tableau</li>
+            <li>Telegram-Bot für Echtzeit-Benachrichtigungen</li>
+        </ul>
+    </div>
+
+    <h2 style="margin-top: 18px;">KAGGLE DATENQUELLE</h2>
+    <div class="box small">
+        <p>Ausgangspunkt des Projekts war ein Kaggle Datensatz mit Immobilienpreisen aus Istanbul.</p>
+        <p style="margin-top:4px;">Daraus entstanden die ersten Datenanalysen und Tableau Dashboards.</p>
+        <br>
+        <a href="https://www.kaggle.com/datasets/brahimenesulusoy/istanbul-apartment-prices-2026-">Kaggle Dataset öffnen</a>
+    </div>
+
+    <h2 style="margin-top: 18px;">TABLEAU DASHBOARDS</h2>
+    <div class="box small">
+        <p>Istanbul Housing Market Analytics 2026</p>
+        <a href="https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026?:language=de-DE&:display_count=n&:origin=viz_share_link">Dashboard öffnen</a>
+        <br><br>
+        <p>Istanbul Residence Listings Analysis</p>
+        <a href="https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResidenceListingsAnalysis?:language=de-DE&:display_count=n&:origin=viz_share_link">Dashboard öffnen</a>
+    </div>
+</section>
+    
+<!-- SLIDE 3: PROBLEM + LÖSUNG -->
+<section>
+    <h2>PROBLEMSTELLUNG</h2>
+    <div class="box small">
+        <ul>
+            <li>Keine automatische Datenaktualisierung in Tableau Public</li>
+            <li>Keine Scheduler Funktion verfügbar</li>
+            <li>Keine Echtzeit Benachrichtigungen</li>
+            <li>Nur Tableau Public Web Authoring Konto vorhanden</li>
+            <li>Keine Backend Automatisierung möglich</li>
+        </ul>
+    </div>
+
+    <h2 style="margin-top: 22px !important; margin-bottom: 8px !important;">LÖSUNGSIDEE</h2>
+    <div class="box small">
+        <ul>
+            <li>Entwicklung einer automatisierten ETL Pipeline</li>
+            <li>Web Scraping neuer Immobilienangebote</li>
+            <li>Historische Datenspeicherung mit SQLite</li>
+            <li>Telegram-Bot für automatische Alerts</li>
+            <li>Automatische Preisumrechnung in EUR & USD</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SLIDE 4: PIPELINE ARCHITEKTUR -->
+
+<section class="pipeline-slide">
+
+    <h2>PIPELINE ARCHITEKTUR</h2>
+
+    <img src="/assets/architecture/pipeline-architecture.png.drawio.png"
+         class="pipeline">
+
+</section>
+
+<!-- SLIDE 5: PROJEKTSTRUKTUR -->
+<section>
+    <h2>PROJEKTSTRUKTUR</h2>
+    <div class="box">
+        <pre>
+istanbul-housing-market-analytics-pipeline/
+├── assets/
+│   ├── architecture/              # Pipeline architecture diagrams
+│   ├── bot/                       # Telegram bot assets & notifications
+│   ├── dashboards/                # Tableau dashboard screenshots
+│   └── screenshots/               # Additional project visuals
+│
+├── dashboards/                    # Tableau dashboard workbooks
+│
+├── data/
+│   ├── raw/                       # Raw scraped datasets
+│   ├── processed/                 # Cleaned & transformed datasets
+│   ├── historical/                # Historical residence price tracking
+│   ├── snapshots/                 # Daily pipeline snapshots
+│   ├── exports/                   # CSV pipeline exports
+│   └── istanbul_housing.db        # SQLite database
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   └── 02_big_data_architecture.ipynb
+│
+├── scripts/
+│   ├── alerts/                    # Telegram notification logic
+│   ├── automation/                # Automated scheduling scripts
+│   ├── processing/
+│   │   └── exchange_rates.py      # Currency conversion logic
+│   ├── scraping/
+│   │   └── scrape_hepsiemlak.py   # Istanbul residence web scraping
+│   └── run_pipeline.py            # Main ETL pipeline execution
+│
+├── tests/
+│   └── test_connection.py
+│
+├── presentation/                  # Final project presentation
+├── run_full_pipeline.sh           # Full automation runner
+├── requirements.txt
+├── README.md
+└── LICENSE
+        </pre>
+    </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section>
+    <h2>VERWENDETE TECHNOLOGIEN</h2>
+    <div class="box small">
+        <ul>
+            <li>Python • Pandas • SQLite</li>
+            <li>Telegram API • Web Scraping</li>
+            <li>Tableau • Git & GitHub</li>
+            <li>Bash Automation • ETL Pipeline</li>
+            <li>Multi-Currency Conversion</li>
+            <li>Custom Emoji System</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SLIDE 7 -->
+<section>
+    <h2>TELEGRAM BOT REVIEW</h2>
+    <p style="font-size:23px;margin:12px 0 18px 0;">Telegram-Profilbild vom Istanbul Housing Alert Bot</p>
+    <img src="/assets/bot/bot_profile.png">
+</section>
+
+<!-- SLIDE 8 -->
+<section>
+    <h2>BOT BRANDING & WORKFLOW</h2>
+    <img src="/assets/bot/telegram_bot_branding.jpg">
+</section>
+
+<!-- SLIDE 9 -->
+<section class="bot-slide">
+    <h2>TELEGRAM STATUS</h2>
+    <img src="/assets/bot/telegram_status.jpg">
+</section>
+
+
+<!-- SLIDE 10 -->
+<section class="bot-slide">
+    <h2>NEW RESIDENCE ALERT</h2>
+    <p style="font-size:21px; max-width:820px; margin:14px auto 18px auto; white-space:normal; overflow: visible;">
+        Nachricht vom Bot, wenn seit dem letzten automatischen Markt-Scan ein neues Angebot erkannt wurde.
+    </p>
+    <img src="/assets/bot/new_list.jpg">
+</section>
+
+<!-- SLIDE 11 -->
+<section class="bot-slide">
+    <h2>NO NEW LISTING NOTIFICATION</h2>
+    <p style="font-size:21px; max-width:820px; margin:14px auto 18px auto; white-space: normal; overflow: visible">
+        Nachricht vom Bot, wenn seit dem letzten automatischen Markt-Scan kein neues Angebot erkannt wurde.
+    </p>
+    <img src="/assets/bot/no_list.jpg">
+</section>
+
+<!-- SLIDE 12: HERAUSFORDERUNGEN + LEARNINGS -->
+<section>
+    <h2>HERAUSFORDERUNGEN</h2>
+    <div class="box small">
+        <ul>
+            <li>Automatisierung ohne Tableau Server</li>
+            <li>Web Scraping Stabilität</li>
+            <li>Datenbereinigung</li>
+            <li>Währungsumrechnung</li>
+            <li>Telegram API Integration</li>
+        </ul>
+    </div>
+
+    <h2 style="margin-top: 45px !important;">LEARNINGS</h2>
+    <div class="box small">
+        <ul>
+            <li>ETL Pipeline Entwicklung</li>
+            <li>SQLite Datenmanagement</li>
+            <li>Automation mit Bash & Python</li>
+            <li>Dashboard Storytelling</li>
+            <li>Projektstrukturierung</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SLIDE 13 -->
+<section>
+    <img src="/assets/Branding/thanks.jpeg" width="170">
+    <h2>VIELEN DANK!</h2>
+    <p>Fragen?</p>
+    <br>
+    <a href="https://github.com/rukiye-erdogan">GitHub Profil</a>
+    <br><br>
+    <a href="https://public.tableau.com/app/profile/rukiye.erdogan/vizzes">Tableau Profil</a>
+</section>
+
+</div>
+</div>
+
+<script src="../node_modules/reveal.js/dist/reveal.js"></script>
+
+<script>
+Reveal.initialize({
+    hash: true,
+    controls: true,
+    progress: true,
+    center: true,
+    pdfSeparateFragments: false,
+    pdfMaxPagesPerSlide: 1, 
+    showNotes: false,
+    transition: "slide",
+    width: 1280,
+    height: 720,
+    margin: 0.04
+});
+</script>
+</body>
+</html>
