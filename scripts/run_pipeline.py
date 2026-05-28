@@ -12,7 +12,9 @@ load_dotenv()
 # PATHS
 # =========================================================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
 
 # ---------------------------------------------------------
 # NO NEW LISTINGS IMAGES
@@ -20,13 +22,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TOP_IMAGE = os.path.join(
     BASE_DIR,
-    "images",
+    "assets", "screenshots",
     "woaw_3_EMOJI.png"
 )
 
 BOTTOM_IMAGE = os.path.join(
     BASE_DIR,
-    "images",
+    "assets", "screenshots",
     "peace_4_EMOJI.png"
 )
 
@@ -36,13 +38,13 @@ BOTTOM_IMAGE = os.path.join(
 
 NEW_TOP_IMAGE = os.path.join(
     BASE_DIR,
-    "images",
+    "assets", "screenshots",
     "schlaubi_2_EMOJI.png"
 )
 
 NEW_BOTTOM_IMAGE = os.path.join(
     BASE_DIR,
-    "images",
+    "assets", "screenshots",
     "daumenhoch_1_EMOJI.png"
 )
 
