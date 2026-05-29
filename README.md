@@ -1,257 +1,82 @@
 # Istanbul Housing Market Analytics Pipeline
 
-**End-to-end Real Estate Analytics Pipeline**  
-From Raw Data to Business Insights using Modern Data Engineering Tools
+**End-to-End Real Estate Analytics & Automation Project**
+
+From web scraping to interactive dashboards and automated market monitoring.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-[![Tableau](https://img.shields.io/badge/Tableau-Live%20Dashboard-orange?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026)
-
-## Live Dashboard
-
-Interactive Tableau dashboards for exploring Istanbul housing market trends and analytics.
-
-## Dashboard Previews
-
-### Market Analytics Dashboard – Istanbul Housing Market Analytics 2026
-
-![Istanbul Housing Market Analytics 2026](assets/dashboards/istanbul-housing-market-analytics-2026.png)
-
-🔗 Tableau Dashboard:
-https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=anaconda&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
 
-### Residence Listings Dashboard – Istanbul Residence Listings Analysis
+## Project Overview
 
-![Istanbul Residence Listings Analysis](assets/dashboards/istanbul-residence-listings-analysis.png)
+Developed an **end-to-end real estate analytics and automation pipeline** for the Istanbul housing market. 
 
-🔗 Tableau Dashboard:
-https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResidenceListingsAnalysis
+Starting from a large scraped dataset from hepsiemlak.com, I designed and implemented a complete ETL process to clean, transform and structure the data. The project features two purpose-built Tableau dashboards and a fully automated Telegram Alert Bot that delivers intelligent market updates every 48 hours.
+
+This project showcases both strong analytical skills and the ability to design scalable, production-oriented data engineering solutions.
+
+---
+
+## Skills Demonstrated
+
+| Area                     | Skills Demonstrated |
+|--------------------------|---------------------|
+| **Data Engineering**     | Web Scraping, ETL Pipeline, Data Modeling, Automation, SQLite |
+| **Data Analysis**        | Exploratory Analysis, Trend Detection, Market Segmentation |
+| **Business Intelligence**| Tableau Dashboarding, Data Storytelling, KPI Development |
+| **Automation**           | Scheduling, Telegram Bot Integration, Pipeline Orchestration |
+| **Tools**                | Python, Pandas, PySpark, BeautifulSoup, Tableau, Git, Jupyter |
+
+---
+
+## Live Dashboards
+
+### 1. Market Analytics Dashboard
+**Comprehensive Market Analysis & Investment Insights**
+
+[→ Open Tableau Dashboard](https://public.tableau.com/views/IstanbulHousingMarketAnalytics2026/IstanbulHousingMarketAnalytics2026)
+
+![Market Analytics Dashboard](assets/dashboards/istanbul-housing-market-analytics-2026.png)
+
+This dashboard provides a deep exploratory analysis of the Istanbul housing market, covering pricing trends, district comparisons, property size efficiency, building age impact, and Asian vs European side differences.
+
+---
+
+### 2. Residence Listings Analysis
+**Automated Pipeline Frontend & Market Monitoring Dashboard**
+
+[→ Open Tableau Dashboard](https://public.tableau.com/views/IstanbulResidenceListingsAnalysis/IstanbulResidenceListingsAnalysis)
+
+![Residence Listings Dashboard](assets/dashboards/istanbul-residence-listings-analysis.png)
+
+This dashboard was designed as the visual frontend for the automated ETL pipeline. It focuses on residence listings by district, average prices, time-based monitoring, and interactive filtering. Although full automation was limited by Tableau Public, the architecture was built for future scalability with Tableau Cloud or Server.
+
+---
 
 ## Pipeline Architecture
 
 <p align="center">
-  <br>
-  <br>
-  <img src="assets/architecture/pipeline-architecture.png.drawio.png" width="400">
-  <br>
-  <br>
+  <img src="assets/architecture/pipeline-architecture.png.drawio.png" width="650">
 </p>
-                                                                              
-## Project Overview
 
-This project analyzes the Istanbul housing market using an end-to-end data analytics pipeline built with Python, SQL, and Tableau.
-
-The pipeline processes more than 24,000 housing listings and transforms raw real estate data into actionable business insights through data cleaning, exploratory analysis, and interactive dashboard visualization.
-
-The project aims to identify:
-- Pricing trends across Istanbul districts
-- High-value investment opportunities
-- Property distribution patterns
-- Market segmentation insights
+---
 
 ## Key Business Insights
 
-```markdown
-# Istanbul Housing Market Analytics 2026
-
-## Overview
-This dashboard provides a comprehensive analysis of Istanbul’s residential real estate market using interactive visualizations and district-based comparisons. The project focuses on identifying pricing trends, regional differences, housing characteristics, and investment insights across both the Asian and European sides of Istanbul.
-
----
-
-# Key Insights
-
-## District-Based Price Analysis
-Significant price differences exist between Istanbul districts.
-
-### Highest Average Prices per m²
-- Bakırköy → ~777,143 ₺/m²
-- Beşiktaş
-- Sarıyer
-- Kağıthane
-- Bayrampaşa
-
-### Lowest Average Prices per m²
-- Esenyurt → ~35,363 ₺/m²
-
-### Main Insight
-Luxury and centrally located districts on the European side dominate the premium real estate market.
+- Significant price variation across districts (Bakırköy ~777k ₺/m² vs. Esenyurt ~35k ₺/m²)
+- Smaller apartments achieve the highest price per m²
+- New buildings (0–5 years) command a clear price premium
+- Asian side shows slightly higher average prices per m²
+- Luxury projects are concentrated in premium districts
 
 ---
-
-## Residential Complex Entry Prices
-The dashboard also analyzes minimum entry prices for luxury residential complexes.
-
-### Examples
-- Beyaz Vadi Konakları Sitesi → ~98M ₺
-- Naile Sultan Sitesi → ~265M ₺
-
-### Main Insight
-Luxury residential projects are heavily concentrated in premium districts such as Beşiktaş and nearby high-income areas.
-
----
-
-## Asian vs European Side Comparison
-
-### Average Price per m²
-- Asian Side (Anatolian) → ~135,750 ₺/m²
-- European Side (Thracian) → ~131,606 ₺/m²
-
-### Main Insight
-- The Asian side slightly outperforms the European side in average price per square meter.
-- The European side contains a stronger concentration of ultra-luxury residential projects.
-
----
-
-## Property Size Category Analysis
-
-### Average Price per m² by Size
-- Small (<80m²) → ~178,568 ₺
-- Mid-sized (80–120m²) → ~113,000 ₺
-- Large (121–200m²) → ~132,000 ₺
-- Spacious (>200m²) → ~145,236 ₺
-
-### Main Insight
-- Smaller apartments achieve the highest price per square meter.
-- Mid-sized apartments offer better price efficiency.
-- Large luxury apartments regain value due to exclusivity and premium locations.
-
----
-
-## Furnishing Status Impact
-
-### Examples
-- Furnished apartments in Küçükçekmece → ~71,050 ₺/m²
-- Unfurnished apartments in Beylikdüzü → ~49,153 ₺/m²
-
-### Main Insight
-Furnished apartments generally achieve higher prices per square meter, although district location remains the strongest pricing factor.
-
----
-
-## Building Age vs Price Relationship
-
-### Average Price per m² by Building Age
-New Build (0–5 years):
-- Asian Side → ~159,742 ₺/m²
-- European Side → ~155,680 ₺/m²
-
-### Main Insight
-- New developments command the highest market premiums.
-- Older buildings show noticeably lower market values.
-- Property age has a strong correlation with pricing.
-
----
-
-# Dashboard Features
-- Interactive district filtering
-- Side-based comparison (Asian vs European)
-- Residential complex analysis
-- Dynamic tooltip insights
-- Bubble charts, scatter plots, and bar charts
-- Comparative real estate analytics
-
----
-
-# Skills & Technologies
-- Data Visualization
-- Business Intelligence
-- Real Estate Analytics
-- Dashboard Design
-- Comparative Market Analysis
-- Interactive Reporting
-- Data Storytelling
-
----
-
-# Conclusion
-The dashboard reveals substantial pricing disparities across Istanbul’s districts and highlights how factors such as location, property size, furnishing status, and building age significantly influence real estate prices. The analysis also demonstrates the dominance of luxury residential developments in premium districts and provides valuable insights for investors, analysts, and decision-makers.
-
-
-# Istanbul Residence Listings Analysis
-
-## Project Overview
-Istanbul Residence Listings Analysis was developed as part of a mini data engineering and business intelligence pipeline project. The primary objective was to design a workflow capable of automatically collecting, processing, and visualizing real estate listing data from Istanbul.
-
-The project was intended to simulate a real-world BI environment in which newly collected property data would continuously update the dashboard through an automated pipeline.
-
----
-
-# Project Objective
-The main goals of the project were:
-
-- Automated collection of residence listing data
-- Data cleaning and preprocessing
-- Structured data storage
-- Tableau dashboard integration
-- Automated dashboard data refresh workflow
-
----
-
-# Current Project Status
-Istanbul Residence Listings Analysis currently includes the complete dashboard structure and analytical framework. Core visualizations and KPI logic have already been implemented, including:
-
-- Residence listings by district
-- Average property price analysis
-- Time-based listing monitoring
-- Interactive district filtering
-
-The automation workflow, however, could not be fully finalized due to limitations of Tableau Public Web Authoring, which does not support advanced scheduling and automatic data refresh functionality.
-
----
-
-# Technical Limitation
-Since the project was built using Tableau Public Web Authoring, direct pipeline automation and scheduled refresh capabilities were limited.
-
-In a production-ready environment using:
-- Tableau Desktop
-- Tableau Cloud
-- Tableau Server
-- External ETL orchestration tools (Python, APIs, Cron Jobs, Airflow, etc.)
-
-the dashboard could be integrated into a fully automated end-to-end data pipeline.
-
----
-
-# Planned Pipeline Architecture
-The intended architecture included:
-
-1. Automated scraping of residence listing data
-2. Scheduled preprocessing and data cleaning
-3. Automated dataset updates
-4. Dynamic Tableau dashboard refresh
-5. Continuous market trend monitoring
-
----
-
-# Skills & Concepts Demonstrated
-- Data Visualization
-- Business Intelligence
-- Tableau Dashboard Development
-- ETL / ELT Pipeline Planning
-- Real Estate Market Analysis
-- Interactive Reporting
-- Dashboard Architecture Design
-
----
-
-# Future Improvements
-Potential future enhancements include:
-
-- Migration to Tableau Desktop or Tableau Cloud
-- Automated Python ETL pipelines
-- Scheduled refresh implementation
-- Database integration
-- Live API connections
-- Expanded historical trend analysis
-
----
-
-# Conclusion
-Istanbul Residence Listings Analysis successfully establishes the foundation for a scalable and automated real estate analytics pipeline. While full automation could not be completed within Tableau Public Web Authoring, the project demonstrates the architecture, analytical logic, and workflow design required for a production-ready business intelligence solution.
-```
 
 ## 📂 Project Structure
 
@@ -296,240 +121,82 @@ istanbul-housing-market-analytics-pipeline/
 └── LICENSE
 ```
 
-## 🤖 Automated Telegram Alert System
+## 🤖 Automated Telegram Alert Bot
 
-The project includes an automated Telegram bot that continuously monitors residence listings across Istanbul.
-
-Every two days, the pipeline automatically executes the complete ETL workflow:
-
-1. Scrapes new residence listings from Istanbul-based real estate platforms  
-2. Cleans and processes the incoming housing data  
-3. Tracks newly added properties and market changes  
-4. Converts all property prices into:
-   - Turkish Lira (₺)
-   - Euro (€)
-   - US Dollar ($)
-5. Sends automated Telegram notifications with the latest market updates
-
-This automation creates a lightweight real-estate monitoring system for tracking Istanbul's residence market in near real-time.
-
-### Key Features
-
-- Automated scraping every 48 hours
-- Istanbul-focused residence monitoring
-- Multi-currency price conversion
-- Automated Telegram alerts
-- Historical snapshot tracking
-- Scalable ETL architecture
-- Fully automated pipeline execution
+The **Istanbul Housing Alerts Bot** is a standout feature of this project — it successfully combines solid **data engineering** with a thoughtful **user-centric product experience**. Every 48 hours, the fully automated pipeline scrapes new real estate listings from Istanbul, processes them intelligently, and delivers curated, relevant notifications directly via Telegram. This transforms the project from static analysis into an active, near real-time market monitoring tool.
 
 ---
 
-## 📲 Telegram Bot Integration
+### Bot Profile & Branding
 
-The project includes a fully automated Telegram notification system called:
+**🧸 Bot Profile**  
+<p align="center">
+<img src="assets/bot/bot_profile.png" width="220">
+</p>
+The custom-designed bot profile serves as the intelligent communication layer of the Istanbul Housing Analytics Pipeline. It integrates automated scraping, PySpark-based data processing, historical listing comparison, smart filtering, and Telegram delivery.
 
-### Istanbul Housing Alerts Bot
+**🎨 Bot Branding & Workflow**  
+<p align="center">
+<img src="assets/bot/telegram_bot_branding.jpg" width="700">
+</p>
+A complete visual identity and branding concept was developed to create a modern and engaging user experience. The design combines friendly storytelling, clean message formatting, and a helpful automated market assistant personality.
 
-The bot was designed as a lightweight real-estate monitoring assistant focused exclusively on residence listings in Istanbul.
+---
 
-Users automatically receive curated housing alerts, market updates, and filtered residence opportunities directly through Telegram.
+### Notification Examples
+
+**📬 New Residence Alert**  
+<p align="center">
+<img src="assets/bot/new_list.jpg" width="380">
+</p>
+When new listings are detected, the bot sends a detailed notification including district, neighborhood, residence complex, price, scraping timestamp, and a direct link to the offer on hepsiemlak.com.
+
+**📊 No-New-Listing Notification**  
+<p align="center">
+<img src="assets/bot/no_list.jpg" width="380">
+</p>
+If no new opportunities are found, the bot sends a friendly market status update instead of spamming the user. This creates a clean and professional notification experience.
 
 ---
 
 ### 🔄 Automated Workflow
 
-Every 48 hours, the system automatically:
-
+Every 48 hours the system automatically executes the full cycle:
 - Scrapes new Istanbul residence listings
-- Detects newly added offers
-- Filters relevant housing opportunities
-- Processes and cleans the data
-- Converts listing prices into:
-  - Turkish Lira (₺)
-  - Euro (€)
-  - US Dollar ($)
-- Sends personalized Telegram notifications
+- Cleans and processes the incoming data
+- Compares with historical records
+- Identifies only newly added properties
+- Converts prices and sends personalized notifications
 
 ---
 
 ### 🧠 Smart Notification Logic
 
-The bot distinguishes between:
-
+The bot intelligently distinguishes between different situations to provide real value:
 - New residence opportunities
 - No-change market updates
 - Historical market tracking
-- Automated monitoring cycles
-
-This creates a clean user experience without unnecessary spam notifications.
-
----
-
-### 🎨 Bot Branding & UX Design
-
-The Telegram bot includes a custom-designed visual identity featuring:
-
-- Personalized mascot branding
-- Emotion-based Telegram reactions
-- Friendly conversational tone
-- Real-estate focused storytelling
-- Istanbul-themed visuals
-- Automated market assistant behavior
-
-The goal was to combine data engineering with a user-friendly product experience.
-
----
-
-## 📸 Telegram Bot Preview
-
-### 🧸 Bot Profile
-
-<p align="center">
-  <img src="assets/bot/bot_profile.png" width="220">
-</p>
-
-The Telegram assistant acts as the intelligent communication layer of the Istanbul Housing Analytics Pipeline.
-
-It automatically informs users whenever newly discovered residence listings appear during the scheduled scraping cycle.
-
-The bot combines:
-
-- automated residence scraping
-- PySpark-based data processing
-- historical listing comparison
-- smart filtering logic
-- Telegram Bot integration
-- recurring execution every 48 hours
-
----
-
-### 🎨 Bot Branding & Workflow
-
-<p align="center">
-  <img src="assets/bot/telegram_bot_branding.jpg" width="900">
-</p>
-
-The project includes a fully designed Telegram branding concept to create a more modern and engaging user experience.
-
-The branding combines:
-
-- friendly visual storytelling
-- custom mascot design
-- clean Telegram message formatting
-- motivational notification design
-- automated workflow presentation
-
-The goal is to transform technical market monitoring into a user-friendly real estate assistant experience.
-
----
-
-### 📱 Telegram-Status
-
-<p align="center">
-  <img src="assets/bot/telegram_status.jpg" width="500">
-</p>
-
-The Telegram status overview demonstrates the live bot environment and overall notification ecosystem.
-
-It provides a compact preview of:
-
-- bot profile setup
-- Telegram integration
-- listing previews
-- notification structure
-- user interaction interface
-
-This section highlights how the project connects data engineering workflows with real-world user communication.
-
----
-
-### 📬 New Residence Alert
-
-The bot automatically sends notifications whenever new Istanbul residence listings are detected during the scheduled scraping cycle.
-
-The scraping process runs automatically every 48 hours and focuses exclusively on residence listings located in Istanbul.
-
-The notification includes:
-
-- district information
-- neighborhood
-- residence complex details
-- property price
-- scraping timestamp
-- direct listing link
-
-<p align="center">
-  <img src="assets/bot/new_list.jpg" width="350">
-</p>
-
----
-
-### 📊 No-New-Listing Notification
-
-If no new residence opportunities are found, the bot sends a friendly market monitoring update instead of unnecessary spam notifications.
-
-This creates a cleaner and more professional user experience while keeping users informed about market activity.
-
-<p align="center">
-  <img src="assets/bot/no_list.jpg" width="350">
-</p>
-
----
-
-### ⚙️ Automated Notification Pipeline
-
-The complete Telegram workflow operates automatically:
-
-1. Residence data gets scraped from the target platform  
-2. Data is processed using PySpark  
-3. Historical listings are compared  
-4. Only newly discovered properties are selected  
-5. Telegram notifications are generated dynamically  
-6. Alerts are sent to subscribers automatically
-
----
-
-### 🛠️ Technologies Used
-
-- Python
-- Telegram Bot API
-- PySpark
-- Pandas
-- BeautifulSoup
-- Scheduling Automation
-- GitHub Actions Ready
+- Regular automated monitoring cycles
 
 ---
 
 ### 💱 Multi-Currency Price Conversion
 
-To improve international usability, the pipeline automatically converts Turkish Lira (TRY) property prices into Euro (EUR) and US Dollar (USD).
-
-The currency conversion logic is implemented in:
-
-```bash
-scripts/processing/exchange_rates.py
-```
-
-This allows Telegram notifications and processed datasets to provide:
+All property prices are automatically converted for better international usability:
 - 🇹🇷 Turkish Lira (TRY)
 - 🇪🇺 Euro (EUR)
 - 🇺🇸 US Dollar (USD)
 
-for each detected Istanbul residence listing.
+The conversion logic is implemented in `scripts/processing/exchange_rates.py`.
 
 ---
 
 ### 🐻 Custom Emoji System
 
-The Telegram assistant includes custom-designed mascot reactions to create a more engaging and user-friendly experience.
-
 <p align="center">
-  <img src="assets/screenshots/daumenhoch_1_EMOJI.png" width="80"/>
-  <img src="assets/screenshots/peace_4_EMOJI.png" width="80"/>
-  <img src="assets/screenshots/schlaubi_2_EMOJI.png" width="80"/>
-  <img src="assets/screenshots/woaw_3_EMOJI.png" width="80"/>
+<img src="assets/screenshots/daumenhoch_1_EMOJI.png" width="80"/>
+<img src="assets/screenshots/peace_4_EMOJI.png" width="80"/>
+<img src="assets/screenshots/schlaubi_2_EMOJI.png" width="80"/>
+<img src="assets/screenshots/woaw_3_EMOJI.png" width="80"/>
 </p>
-
----
+Custom-designed mascot reactions were created to make the notifications more engaging, human, and friendly while keeping a professional tone.
