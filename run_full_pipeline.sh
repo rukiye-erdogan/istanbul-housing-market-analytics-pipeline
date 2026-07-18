@@ -1,16 +1,33 @@
 #!/bin/bash
 
-echo "Starting Full Istanbul Housing Pipeline..."
+set -euo pipefail
 
-# Zum Projektordner wechseln
-cd ~/Documents/GitHub/istanbul-housing-market-analytics-pipeline
+PROJECT_DIR="$HOME/Documents/GitHub/istanbul-housing-market-analytics-pipeline"
+LOG_DIR="$PROJECT_DIR/logs"
+LOG_FILE="$LOG_DIR/pipeline_$(date '+%Y-%m-%d_%H-%M-%S').log"
 
-# Scraper starten
-cd pipeline
-python scrape_hepsiemlak.py
+mkdir -p "$LOG_DIR"
 
-# Pipeline starten
-cd ../scripts
-python run_pipeline.py
+exec > >(tee -a "$LOG_FILE") 2>&1
 
-echo "Pipeline Finished!"
+echo "========================================"
+echo "Starting Full Istanbul Housing Pipeline"
+echo "Date: $(date)"
+echo "Project: $PROJECT_DIR"
+echo "========================================"
+
+cd "$PROJECT_DIR"
+
+echo
+echo "1. Starting Hepsiemlak scraper..."
+python3 scripts/scraping/scrape_hepsiemlak.py
+
+echo
+echo "2. Starting processing and Telegram alerts..."
+python3 -m scripts.run_pipeline
+
+echo
+echo "========================================"
+echo "Pipeline finished successfully."
+echo "Log: $LOG_FILE"
+echo "========================================"

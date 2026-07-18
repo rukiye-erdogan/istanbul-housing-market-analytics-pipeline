@@ -23,27 +23,45 @@ listing_id,listing_url,price,district,neighborhood,is_in_complex,scraped_at
 57142,https://www.hepsiemlak.com/istanbul-eyupsultan-5-levent-satilik/residence/8525-57142,11500000,Eyüpsultan,5. Levent Mah.,True,2026-05-19 20:35:01.550160
 57345,https://www.hepsiemlak.com/istanbul-sisli-esentepe-satilik/residence/8525-57345,67500000,Şişli,Esentepe Mah.,True,2026-05-19 20:35:01.561413
 57344,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57344,103000000,Beşiktaş,Levazım Mah.,True,2026-05-19 20:35:01.573894
-7354,https://www.hepsiemlak.com/istanbul-sariyer-maslak-satilik/residence/2608-7354,35000000,Sarıyer,Maslak Mah.,True,2026-05-20 02:04:55.690186
-17569,https://www.hepsiemlak.com/istanbul-besiktas-dikilitas-satilik/residence/9636-17569,82500000,Beşiktaş,Dikilitaş Mah.,True,2026-05-20 02:04:55.708245
-57339,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57339,140000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.727495
-57318,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57318,185000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.739699
-57329,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57329,119000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.751259
-57305,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57305,283000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.762523
-624,https://www.hepsiemlak.com/istanbul-esenyurt-akevler-satilik/residence/109839-624,2350000,Esenyurt,Akevler Mah.,True,2026-05-20 02:04:55.773583
-57300,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57300,157500000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.784581
-57301,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57301,215000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.795570
-57217,https://www.hepsiemlak.com/istanbul-sisli-esentepe-satilik/residence/8525-57217,42000000,Şişli,Esentepe Mah.,True,2026-05-20 02:04:55.806633
-57292,https://www.hepsiemlak.com/istanbul-besiktas-nisbetiye-satilik/residence/8525-57292,127500000,Beşiktaş,Nisbetiye Mah.,True,2026-05-20 02:04:55.817630
-57307,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57307,210000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.828528
-57309,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57309,98000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.839553
-57310,https://www.hepsiemlak.com/istanbul-besiktas-nisbetiye-satilik/residence/8525-57310,123750000,Beşiktaş,Nisbetiye Mah.,True,2026-05-20 02:04:55.850511
-57313,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57313,123000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.862154
-57330,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57330,118000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.872920
-57340,https://www.hepsiemlak.com/istanbul-besiktas-nisbetiye-satilik/residence/8525-57340,85000000,Beşiktaş,Nisbetiye Mah.,True,2026-05-20 02:04:55.883806
-57337,https://www.hepsiemlak.com/istanbul-besiktas-nisbetiye-satilik/residence/8525-57337,102000000,Beşiktaş,Nisbetiye Mah.,True,2026-05-20 02:04:55.895843
-57291,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57291,140000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.906503
-57137,https://www.hepsiemlak.com/istanbul-bahcelievler-yenibosna-merkez-satilik/residence/8525-57137,8300000,Bahçelievler,Yenibosna Merkez Mah.,True,2026-05-20 02:04:55.917117
-57124,https://www.hepsiemlak.com/istanbul-sisli-mecidiyekoy-satilik/residence/8525-57124,280000000,Şişli,Mecidiyeköy Mah.,True,2026-05-20 02:04:55.927849
-57142,https://www.hepsiemlak.com/istanbul-eyupsultan-5-levent-satilik/residence/8525-57142,11500000,Eyüpsultan,5. Levent Mah.,True,2026-05-20 02:04:55.938685
-57345,https://www.hepsiemlak.com/istanbul-sisli-esentepe-satilik/residence/8525-57345,67500000,Şişli,Esentepe Mah.,True,2026-05-20 02:04:55.949436
-57344,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57344,103000000,Beşiktaş,Levazım Mah.,True,2026-05-20 02:04:55.960203
+2267,https://www.hepsiemlak.com/istanbul-kagithane-gursel-satilik/residence/85532-2267,6900000,Kağıthane,Gürsel Mah.,True,2026-07-15 13:00:13.459818
+286,https://www.hepsiemlak.com/istanbul-kagithane-caglayan-satilik/residence/144780-286,5600000,Kağıthane,Çağlayan Mah.,True,2026-07-15 13:00:13.474648
+2252,https://www.hepsiemlak.com/istanbul-esenyurt-cumhuriyet-satilik/residence/65982-2252,6850000,Esenyurt,Cumhuriyet Mah.,True,2026-07-15 13:00:13.488391
+160,https://www.hepsiemlak.com/istanbul-sariyer-ayazaga-satilik/residence/144780-160,26000000,Sarıyer,Ayazağa Mah.,True,2026-07-15 13:00:13.501447
+12,https://www.hepsiemlak.com/istanbul-kadikoy-goztepe-satilik/residence/169844-12,18900000,Kadıköy,Göztepe Mah.,True,2026-07-15 13:00:13.520239
+102911,https://www.hepsiemlak.com/istanbul-eyupsultan-gokturk-merkez-satilik/residence/69537-102911,51500000,Eyüpsultan,Göktürk Merkez Mah.,True,2026-07-15 13:00:13.533150
+156,https://www.hepsiemlak.com/istanbul-beylikduzu-beylikduzu-osb-satilik/residence/145691-156,2100000,Beylikdüzü,Beylikdüzü OSB Mah.,True,2026-07-15 13:00:13.546030
+275,https://www.hepsiemlak.com/istanbul-kucukcekmece-halkali-merkez-satilik/residence/123596-275,18500000,Küçükçekmece,Halkalı Merkez Mah.,True,2026-07-15 13:00:13.558683
+83,https://www.hepsiemlak.com/istanbul-buyukcekmece-cumhuriyet-satilik/residence/163478-83,4200000,Büyükçekmece,Cumhuriyet Mah.,True,2026-07-15 13:00:13.572237
+57,https://www.hepsiemlak.com/istanbul-esenyurt-gokevler-satilik/residence/168780-57,3450000,Esenyurt,Gökevler Mah.,True,2026-07-15 13:00:13.585390
+192,https://www.hepsiemlak.com/istanbul-kagithane-talatpasa-satilik/residence/145839-192,8800000,Kağıthane,Talatpaşa Mah.,True,2026-07-15 13:00:13.597857
+57440,https://www.hepsiemlak.com/istanbul-sisli-tesvikiye-satilik/residence/8525-57440,134500000,Şişli,Teşvikiye Mah.,True,2026-07-15 13:00:13.610373
+73,https://www.hepsiemlak.com/istanbul-esenyurt-orhan-gazi-satilik/residence/154933-73,2750000,Esenyurt,Orhan Gazi Mah.,True,2026-07-15 13:00:13.622773
+605,https://www.hepsiemlak.com/istanbul-besiktas-nisbetiye-satilik/residence/124316-605,112500000,Beşiktaş,Nisbetiye Mah.,True,2026-07-15 13:00:13.634930
+57294,https://www.hepsiemlak.com/istanbul-besiktas-levazim-satilik/residence/8525-57294,110000000,Beşiktaş,Levazım Mah.,True,2026-07-15 13:00:13.648007
+511,https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/residence/136797-511,55000000,Şişli,Merkez Mah.,True,2026-07-15 13:00:13.659635
+40,https://www.hepsiemlak.com/istanbul-kagithane-telsizler-satilik/residence/168963-40,6100000,Kağıthane,Telsizler Mah.,True,2026-07-15 13:00:13.672835
+725,https://www.hepsiemlak.com/istanbul-kagithane-hamidiye-satilik/residence/145406-725,39750000,Kağıthane,Hamidiye Mah.,True,2026-07-15 13:00:13.684434
+46920308,https://www.hepsiemlak.com/istanbul-bagcilar-100-yil-satilik/residence/0-46920308,2850000,Bağcılar,100. Yıl Mah.,True,2026-07-15 13:00:13.700878
+1264,https://www.hepsiemlak.com/istanbul-kartal-kordonboyu-satilik/residence/124165-1264,37250000,Kartal,Kordonboyu Mah.,True,2026-07-15 13:00:13.714177
+15,https://www.hepsiemlak.com/istanbul-pendik-kaynarca-satilik/residence/165102-15,22000000,Pendik,Kaynarca Mah.,True,2026-07-15 13:00:13.728117
+2302,https://www.hepsiemlak.com/istanbul-sisli-yayla-satilik/residence/85532-2302,8750000,Şişli,Yayla Mah.,True,2026-07-15 13:00:13.740188
+1529,https://www.hepsiemlak.com/istanbul-sisli-yayla-satilik/residence/17314-1529,8000000,Şişli,Yayla Mah.,True,2026-07-15 13:00:13.752282
+12523,https://www.hepsiemlak.com/istanbul-kagithane-celiktepe-satilik/residence/81240-12523,13150000,Kağıthane,Çeliktepe Mah.,True,2026-07-15 13:00:13.764409
+22417,https://www.hepsiemlak.com/istanbul-bagcilar-15-temmuz-satilik/residence/40658-22417,11900000,Bağcılar,15 Temmuz Mah.,True,2026-07-17 14:59:54.850695
+59,https://www.hepsiemlak.com/istanbul-esenyurt-barbaros-hayrettin-pasa-satilik/residence/168780-59,4400000,Esenyurt,Barbaros Hayrettin Paşa Mah.,True,2026-07-17 14:59:54.905916
+11,https://www.hepsiemlak.com/istanbul-sisli-mecidiyekoy-satilik/residence/169212-11,10450000,Şişli,Mecidiyeköy Mah.,True,2026-07-17 14:59:54.919421
+1095,https://www.hepsiemlak.com/istanbul-esenyurt-yesilkent-satilik/residence/136375-1095,4000000,Esenyurt,Yeşilkent Mah.,True,2026-07-17 14:59:54.944849
+4237,https://www.hepsiemlak.com/istanbul-kartal-cevizli-satilik/residence/72542-4237,4400000,Kartal,Cevizli Mah.,True,2026-07-17 14:59:54.995808
+4651,https://www.hepsiemlak.com/istanbul-kagithane-talatpasa-satilik/residence/24435-4651,5900000,Kağıthane,Talatpaşa Mah.,True,2026-07-17 14:59:55.008250
+45223,https://www.hepsiemlak.com/istanbul-kagithane-gultepe-satilik/residence/17993-45223,4650000,Kağıthane,Gültepe Mah.,True,2026-07-17 14:59:55.052751
+451,https://www.hepsiemlak.com/istanbul-zeytinburnu-kazlicesme-satilik/residence/145707-451,21200000,Zeytinburnu,Kazlıçeşme Mah.,True,2026-07-17 14:59:55.078999
+6480,https://www.hepsiemlak.com/istanbul-sisli-fulya-satilik/residence/6485-6480,11450000,Şişli,Fulya Mah.,True,2026-07-17 14:59:55.091198
+12525,https://www.hepsiemlak.com/istanbul-kagithane-emniyet-evleri-satilik/residence/81240-12525,12750000,Kağıthane,Emniyet Evleri Mah.,True,2026-07-17 14:59:55.104025
+724,https://www.hepsiemlak.com/istanbul-eyupsultan-alibeykoy-satilik/residence/79030-724,7999999,Eyüpsultan,Alibeyköy Mah.,True,2026-07-18 13:09:17.276660
+920,https://www.hepsiemlak.com/istanbul-atasehir-ataturk-satilik/residence/40554-920,24500000,Ataşehir,Atatürk Mah.,True,2026-07-18 13:09:17.350268
+56,https://www.hepsiemlak.com/istanbul-kadikoy-fikirtepe-satilik/residence/158228-56,6290000,Kadıköy,Fikirtepe Mah.,True,2026-07-18 13:09:17.362805
+58,https://www.hepsiemlak.com/istanbul-esenyurt-gokevler-satilik/residence/168780-58,5650000,Esenyurt,Gökevler Mah.,True,2026-07-18 13:09:17.417255
+1,https://www.hepsiemlak.com/istanbul-beyoglu-piyalepasa-satilik/residence/169660-1,15150000,Beyoğlu,Piyalepaşa Mah.,True,2026-07-18 13:09:17.430506
+298,https://www.hepsiemlak.com/istanbul-kucukcekmece-inonu-satilik/residence/132012-298,7200000,Küçükçekmece,İnönü Mah.,True,2026-07-18 13:26:07.106717
+667,https://www.hepsiemlak.com/istanbul-esenyurt-yesilkent-satilik/residence/145537-667,3050000,Esenyurt,Yeşilkent Mah.,True,2026-07-18 13:26:07.270812
+7416,https://www.hepsiemlak.com/istanbul-zeytinburnu-sumer-satilik/residence/2608-7416,9500000,Zeytinburnu,Sümer Mah.,True,2026-07-18 13:26:08.588337

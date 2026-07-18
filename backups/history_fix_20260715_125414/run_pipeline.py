@@ -4,7 +4,6 @@ import pandas as pd
 from pandas.errors import EmptyDataError
 from dotenv import load_dotenv
 from scripts.processing.exchange_rates import get_exchange_rates
-import json
 
 # Load .env
 load_dotenv()
@@ -142,19 +141,6 @@ history_df = history_df.drop_duplicates(
     subset=["listing_id"]
 )
 
-# IDs für einen zuverlässigen Vergleich vereinheitlichen
-current_df["listing_id"] = (
-    current_df["listing_id"]
-    .astype(str)
-    .str.strip()
-)
-
-history_df["listing_id"] = (
-    history_df["listing_id"]
-    .astype(str)
-    .str.strip()
-)
-
 # =========================================================
 # DETECT NEW LISTINGS
 # =========================================================
@@ -204,116 +190,84 @@ if len(new_listings) > 0:
 
     print("\n🔥 NEW LISTINGS DETECTED:\n")
 
-    # Eigene Housing-Bears
-    WOW_BEAR_ID = "5224643461487044408"
-    BRIEFCASE_BEAR_ID = "5222357516683353476"
-    GLASSES_BEAR_ID = "5224238334401876298"
-    THUMBSUP_BEAR_ID = "5222122852555201410"
-
-    WOW_BEAR = "🤩"
-    BRIEFCASE_BEAR = "💼"
-    GLASSES_BEAR = "🤓"
-    THUMBSUP_BEAR = "👍"
-
-    def utf16_length(value):
-        """Telegram misst Entity-Offsets in UTF-16-Codeeinheiten."""
-        return len(value.encode("utf-16-le")) // 2
-
-    def custom_emoji_entity(full_text, emoji, emoji_id):
-        position = full_text.index(emoji)
-
-        return {
-            "type": "custom_emoji",
-            "offset": utf16_length(full_text[:position]),
-            "length": utf16_length(emoji),
-            "custom_emoji_id": emoji_id,
-        }
-
-    def format_with_dots(value):
-        """Formatiert Tausender mit Punkten."""
-        return f"{round(float(value)):,.0f}".replace(",", ".")
-
     for _, row in new_listings.iterrows():
 
-        price = float(row["price"])
+        price = row["price"]
 
         price_usd = round(price / usd_try)
         price_eur = round(price / eur_try)
 
-        price_try_text = format_with_dots(price)
-        price_usd_text = f"{price_usd:,.0f}"
-        price_eur_text = format_with_dots(price_eur)
+        # =================================================
+        # MESSAGE
+        # =================================================
 
-        scraped_at = pd.to_datetime(
-            row["scraped_at"],
-            errors="coerce"
-        )
+        message = f"""
+🤩🏡 Guten Morgen! ☀️💫
 
-        if pd.isna(scraped_at):
-            scraped_at_text = str(row["scraped_at"])
-        else:
-            scraped_at_text = scraped_at.strftime(
-                "%d %b %Y · %H:%M"
-            )
+Ein neuer Istanbul-Schatz könnte auf dich warten 💎✨
 
-        message = f"""👋 Hi, nice to see you {WOW_BEAR} again!
+📍 Bezirk: {row['district']}
+🏘 Stadtteil: {row['neighborhood']}
 
-A new gem in Istanbul might be waiting for {BRIEFCASE_BEAR} you! ✨
+💰 Kaufpreis:
+🇹🇷 {price:,.0f} TL
+🇺🇸 ${price_usd:,.0f}
+🇪🇺 €{price_eur:,.0f}
 
-📍 District: {row['district']}
-🏘 Neighborhood: {row['neighborhood']}
+🕒 Neu im Markt seit:
+{row['scraped_at']}
 
-💰 Purchase price:
-🇹🇷 {price_try_text} TL
-🇺🇸 {price_usd_text} $
-🇪🇺 {price_eur_text} €
-
-🕒 Listed on the market since:
-{scraped_at_text}
-
-🔗 Direct link to the listing:
+🔗 Direkt zum Angebot:
 {row['listing_url']}
 
-🤝 Perhaps this is already your next ✨ dream property! {GLASSES_BEAR}
+🤝 Vielleicht ist das bereits dein nächstes Traumobjekt 🥳🏡✨
 
-💫🍀 Good luck in your search for special properties in Istanbul! 🍀💫 {THUMBSUP_BEAR}"""
-
-        entities = [
-            custom_emoji_entity(
-                message,
-                WOW_BEAR,
-                WOW_BEAR_ID
-            ),
-            custom_emoji_entity(
-                message,
-                BRIEFCASE_BEAR,
-                BRIEFCASE_BEAR_ID
-            ),
-            custom_emoji_entity(
-                message,
-                GLASSES_BEAR,
-                GLASSES_BEAR_ID
-            ),
-            custom_emoji_entity(
-                message,
-                THUMBSUP_BEAR,
-                THUMBSUP_BEAR_ID
-            ),
-        ]
+Viel Erfolg bei der Jagd nach besonderen Immobilien in Istanbul 🌸💫
+"""
 
         print(message)
 
+        # =================================================
+        # 1. SEND TOP IMAGE
+        # =================================================
+
+        if os.path.exists(NEW_TOP_IMAGE):
+
+            with open(NEW_TOP_IMAGE, "rb") as photo:
+
+                photo_response = requests.post(
+                    TELEGRAM_PHOTO_URL,
+                    data={
+                        "chat_id": CHAT_ID
+                    },
+                    files={
+                        "photo": photo
+                    }
+                )
+
+            print(
+                "Telegram New Top Photo Status:",
+                photo_response.status_code
+            )
+
+        else:
+
+            print(
+                f"Warnung: Bild nicht gefunden unter {NEW_TOP_IMAGE}"
+            )
+
+        # =================================================
+        # 2. SEND TEXT MESSAGE
+        # =================================================
+
         payload = {
             "chat_id": CHAT_ID,
-            "text": message,
-            "entities": json.dumps(entities),
-            "disable_web_page_preview": "false",
+            "text": message
         }
 
         response = requests.post(
             TELEGRAM_URL,
-            data=payload,
-            timeout=30,
+            data=payload
         )
 
         print(
@@ -321,15 +275,37 @@ A new gem in Istanbul might be waiting for {BRIEFCASE_BEAR} you! ✨
             response.status_code
         )
 
-        if not response.ok:
+        # =================================================
+        # 3. SEND BOTTOM IMAGE
+        # =================================================
+
+        if os.path.exists(NEW_BOTTOM_IMAGE):
+
+            with open(NEW_BOTTOM_IMAGE, "rb") as photo:
+
+                photo_response = requests.post(
+                    TELEGRAM_PHOTO_URL,
+                    data={
+                        "chat_id": CHAT_ID
+                    },
+                    files={
+                        "photo": photo
+                    }
+                )
+
             print(
-                "Telegram Error:",
-                response.text
+                "Telegram New Bottom Photo Status:",
+                photo_response.status_code
             )
-            response.raise_for_status()
+
+        else:
+
+            print(
+                f"Warnung: Bild nicht gefunden unter {NEW_BOTTOM_IMAGE}"
+            )
 
         print(
-            "--- New listing successfully processed ---\n"
+            "--- Listing erfolgreich verarbeitet ---\n"
         )
 
 # =========================================================
@@ -434,33 +410,3 @@ Bleib gesund, munter und dem Markt immer einen Schritt voraus ✌️💫💫💫
 # =========================================================
 
 print("Pipeline Finished!")
-
-# =========================================================
-# HISTORY UPDATE AFTER SUCCESSFUL PIPELINE
-# =========================================================
-
-updated_history = pd.concat(
-    [history_df, current_df],
-    ignore_index=True
-)
-
-updated_history = updated_history.drop_duplicates(
-    subset=["listing_id"],
-    keep="first"
-)
-
-os.makedirs(
-    os.path.dirname(DATA_HIST),
-    exist_ok=True
-)
-
-updated_history.to_csv(
-    DATA_HIST,
-    index=False
-)
-
-print(
-    f"Historical CSV updated successfully: "
-    f"{len(updated_history)} unique listings."
-)
-

@@ -1,0 +1,1 @@
+0 18 */2 * * cd /Users/rukiyeerdogan/Documents/GitHub/istanbul-housing-market-analytics-pipeline && ./run_full_pipeline.sh
